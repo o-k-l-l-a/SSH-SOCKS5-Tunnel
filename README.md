@@ -79,7 +79,7 @@ CHAT_ID = "YOUR_CHAT_ID"
 Run the main script:
 
 ```bash
-python3 script.py
+python3 ssh_bot.py
 ```
 
 The bot will:
