@@ -1,49 +1,41 @@
-````markdown
+---
+
 # 🚀 SSH-SOCKS5-Tunnel
 
-A robust Python-based SSH SOCKS5 proxy tunnel manager with Telegram bot integration.  
-Automatically establishes and monitors SSH SOCKS5 tunnels through multiple servers, sends system status updates, and accepts remote commands via Telegram.
+Python-based SSH SOCKS5 proxy tunnel manager with Telegram bot integration.
+Automatically creates and monitors SSH tunnels through multiple servers, sends system info, and accepts remote commands via Telegram.
 
 ---
 
 ## ✨ Features
 
-- 🔄 **Automatic SSH SOCKS5 Tunnel Management**  
-  Connects to multiple SSH servers with dynamic port forwarding (SOCKS5 proxy), automatically reconnects on failure.
-
-- 🤖 **Telegram Bot Integration**  
-  Receive system status and control your tunnel setup via Telegram commands.
-
-- 🌐 **Multi-Server Support**  
-  Load, save, and cycle through multiple SSH servers with password or key authentication.
-
-- 📊 **System Monitoring**  
-  CPU, RAM, Disk, and network bandwidth stats delivered on demand via Telegram.
-
-- 🛑 **Graceful Shutdown Handling**  
-  Proper cleanup of SSH tunnels on exit or termination signals.
+* 🔄 Automatic SSH SOCKS5 Tunnel Management (dynamic port forwarding, auto-reconnect)
+* 🤖 Telegram Bot Integration for remote control and status updates
+* 🌐 Support for multiple SSH servers with password or key authentication
+* 📊 On-demand system monitoring: CPU, RAM, Disk, Network stats
+* 🛑 Graceful shutdown and cleanup on exit or kill signals
 
 ---
 
 ## ⚙️ Prerequisites
 
-- 🐧 Linux-based OS (tested on Ubuntu/Debian)  
-- 🐍 Python 3.6+  
-- 🔐 SSH client tools installed (`ssh`, `sshpass`)  
-- 🤖 Telegram Bot Token & Chat ID  
+* 🐧 Linux (Ubuntu/Debian recommended)
+* 🐍 Python 3.6+
+* 🔐 Installed SSH client tools: `ssh`, `sshpass`
+* 🤖 Telegram Bot Token and Chat ID
 
 ---
 
 ## 🛠️ Installation
 
-1. **Clone this repository:**
+1. Clone the repo:
 
 ```bash
 git clone https://github.com/o-k-l-l-a/SSH-SOCKS5-Tunnel.git
 cd SSH-SOCKS5-Tunnel
-````
+```
 
-2. **Run the setup script to install dependencies:**
+2. Run setup script to install dependencies:
 
 ```bash
 chmod +x setup.sh
@@ -54,7 +46,7 @@ chmod +x setup.sh
 
 ## ⚙️ Configuration
 
-* Add your SSH servers to `servers.json` using the Telegram bot command `/ssh` or manually edit the file with entries like:
+Add your SSH servers in `servers.json`. You can either use the Telegram bot command `/ssh` or manually edit the file like this:
 
 ```json
 [
@@ -73,7 +65,7 @@ chmod +x setup.sh
 ]
 ```
 
-* Set your Telegram bot token and chat ID in the Python script variables:
+Then set your Telegram bot token and chat ID inside the Python script:
 
 ```python
 BOT_TOKEN = "YOUR_BOT_TOKEN"
@@ -84,7 +76,7 @@ CHAT_ID = "YOUR_CHAT_ID"
 
 ## ▶️ Usage
 
-Run the main Python script:
+Run the main script:
 
 ```bash
 python3 script.py
@@ -92,47 +84,42 @@ python3 script.py
 
 The bot will:
 
-* 🔐 Maintain a persistent SSH SOCKS5 tunnel on port `4343` by default.
-* 🔄 Monitor tunnel status and reconnect if necessary.
-* 💬 Listen for Telegram commands to provide status, list servers, or add new SSH servers.
+* Maintain a SOCKS5 proxy on port `4343`
+* Auto-reconnect tunnels if disconnected
+* Listen for Telegram commands (`/status`, `/list`, `/ssh ...`)
 
 ---
 
 ## 💬 Telegram Commands
 
-* `/status` — Get current system status (CPU, RAM, Disk, Network).
-* `/list` — List all registered SSH servers.
-* `/ssh host=IP port=22 user=username pass=password` — Add a new SSH server.
-* Supports key-based authentication as well: `/ssh host=IP port=22 user=username key=/path/to/key`
+* `/status` — Show current system stats (CPU, RAM, Disk, Network)
+* `/list` — List saved SSH servers
+* `/ssh host=IP port=22 user=username pass=password` — Add new server (supports `key=` too)
 
 ---
 
 ## 🛠 Troubleshooting
 
-* ✅ Make sure `sshpass` is installed and available in your PATH.
-* 🔑 Verify your SSH keys and passwords are correct.
-* 🚪 The bot uses port `4343` locally for the SOCKS5 proxy; ensure this port is free.
-* 🔍 Check Telegram bot token and chat ID correctness.
-* 📜 Logs are printed to console; monitor for errors.
+* Ensure `sshpass` is installed and in your PATH
+* Verify SSH keys and passwords
+* Confirm port `4343` is free locally
+* Double-check Telegram bot token and chat ID
+* Watch console logs for errors
 
 ---
 
 ## 📄 License
 
-MIT License — see [LICENSE](LICENSE) file for details.
+MIT License. See [LICENSE](LICENSE) file.
 
 ---
 
-## 🤝 Contributing
+## 🤝 Contributing & Contact
 
-Feel free to open issues or submit pull requests for improvements and bug fixes.
+Open issues or PRs on GitHub.
+Created by [o-k-l-l-a](https://github.com/o-k-l-l-a).
+For help, open an issue or message via Telegram.
 
 ---
 
-## 📫 Contact
-
-Created by [o-k-l-l-a](https://github.com/o-k-l-l-a)
-For support or questions, open an issue or contact via Telegram.
-
-```
-```
+اگر دوست داری، می‌تونم نسخه Markdown فایلش رو هم برات آماده کنم تا سریع آپلود کنی.
