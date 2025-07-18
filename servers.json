@@ -1,0 +1,14 @@
+[
+  {
+    "host": "192.168.1.10",
+    "port": 22,
+    "user": "root",
+    "pass": "yourpassword"
+  },
+  {
+    "host": "example.com",
+    "port": 2222,
+    "user": "ubuntu",
+    "key": "/home/user/.ssh/id_rsa"
+  }
+]
