@@ -122,4 +122,3 @@ For help, open an issue or message via Telegram.
 
 ---
 
-اگر دوست داری، می‌تونم نسخه Markdown فایلش رو هم برات آماده کنم تا سریع آپلود کنی.
